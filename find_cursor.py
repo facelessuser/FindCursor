@@ -39,11 +39,16 @@ Example Keymap:
 import sublime_plugin
 import sublime
 import time
+from collections import namedtuple
 
 PAN_MODE = -2
 NULL_INDEX = -1
 FORWARD = 1
 BACKWARD = -1
+
+
+class PanCursor(namedtuple('PanCursor', ['cursor', 'distance', 'index'], verbose=False)):
+    pass
 
 
 class FindCursorCommand(sublime_plugin.TextCommand):
@@ -157,7 +162,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
 
         if index != PAN_MODE:
             for s in sel:
-                if visible_region.begin() <= s.b and s.b <= visible_region.end():
+                if visible_region.begin() <= s.b <= visible_region.end():
                     cursor = s
                     index = PAN_MODE
 
@@ -209,16 +214,16 @@ class FindCursorCommand(sublime_plugin.TextCommand):
                 idx = -1
                 for s in sel:
                     idx += 1
-                    if visible_region.begin() <= s.b and s.b <= visible_region.end():
+                    if visible_region.begin() <= s.b <= visible_region.end():
                         distance = abs(center_pt - s.b)
-                        if closest is None or distance < closest[1]:
-                            closest = (s, distance, idx)
+                        if closest is None or distance < closest.distance:
+                            closest = PanCursor(s, distance, idx)
                     elif s.b > visible_region.end():
                         break
 
                 if closest is not None:
-                    cursor = closest[0]
-                    index = closest[2]
+                    cursor = closest.cursor
+                    index = closest.index
 
             if cursor is None:
                 # Next cursor or offscreen cursor
