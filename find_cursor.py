@@ -115,8 +115,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
         Set the last cursor index in the view settings.
         """
 
-        skip_focus = pan and int(self.settings.get("caret_last_index", NULL_INDEX)) == NULL_INDEX
-        if not skip_focus:
+        if not self.skip_focus:
             if pan:
                 self.view.show(cursor, True)
             else:
@@ -149,6 +148,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
         If no cursor in viewable region or on additional calls,
         grab first cursor outside of viewable region in the desired direction.
         """
+        self.skip_focus = int(self.settings.get("caret_last_index", NULL_INDEX)) == NULL_INDEX
         cursor = None
         index = int(self.settings.get("caret_last_index", NULL_INDEX))
 
@@ -178,6 +178,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
                         break
 
             if cursor is not None:
+                self.skip_focus = False
                 index = PAN_MODE
 
         return cursor, index
@@ -189,6 +190,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
         iterate to the next cursor in the desired direction.
         """
 
+        self.skip_focus = False
         cursor = None
         index = int(self.settings.get("caret_last_index", NULL_INDEX))
 
