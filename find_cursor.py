@@ -242,10 +242,12 @@ class FindCursorCommand(sublime_plugin.TextCommand):
         Show the cursor and the carets in a highly visible way, then revert them back to normal.
         """
 
+        self.settings = sublime.load_settings("find_cursor.sublime-settings")
+        timeout = self.settings.get("find_mode_timeout", 3000)
         self.save()
         self.high_visibility()
         self.find_cursor(FORWARD if not reverse else BACKWARD, pan)
-        sublime.set_timeout(lambda t=str(self.time): self.restore(t), 3000)
+        sublime.set_timeout(lambda t=str(self.time): self.restore(t), timeout)
 
 
 class FindCursorListener(sublime_plugin.EventListener):
