@@ -72,7 +72,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
             self.save_item(defaults, "width", "caret_extra_width")
             self.save_item(defaults, "top", "caret_extra_top")
             self.save_item(defaults, "bottom", "caret_extra_bottom")
-            self.save_item(defaults, "style" , "caret_style")
+            self.save_item(defaults, "style", "caret_style")
             self.save_item(defaults, "inverse", "inverse_caret_state")
             self.settings.set("caret_defaults", defaults)
 
