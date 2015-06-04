@@ -1,7 +1,8 @@
 """
-Find Cursor
+Find Cursor.
+
 Licensed under MIT
-Copyright (c) 2014 Isaac Muse <isaacmuse@gmail.com>
+Copyright (c) 2014 - 2015 Isaac Muse <isaacmuse@gmail.com>
 
 Makes Sublime cursors highly visible for a short duration.
 
@@ -48,23 +49,25 @@ BACKWARD = -1
 
 
 class PanCursor(namedtuple('PanCursor', ['cursor', 'distance', 'index'], verbose=False)):
+
+    """Pan cursor object."""
+
     pass
 
 
 class FindCursorCommand(sublime_plugin.TextCommand):
+
+    """Find cursor command."""
+
     def save_item(self, defaults, src, dest):
-        """
-        Save the item if setting is available.
-        """
+        """Save the item if setting is available."""
 
         setting = self.settings.get(dest, None)
         if setting is not None:
             defaults[src] = setting
 
     def save(self):
-        """
-        Save the view's caret settings.
-        """
+        """Save the view's caret settings."""
 
         self.settings = self.view.settings()
         if self.settings.get("caret_defaults", None) is None:
@@ -77,17 +80,16 @@ class FindCursorCommand(sublime_plugin.TextCommand):
             self.settings.set("caret_defaults", defaults)
 
     def restore_item(self, defaults, src, dest):
-        """
-        Restore item if setting is available. Erase item if it is not.
-        """
+        """Restore item if setting is available. Erase item if it is not."""
 
         setting = defaults.get(src, None)
-        self.settings.set(dest, setting) if setting is not None else self.settings.erase(dest)
+        if setting is not None:
+            self.settings.set(dest, setting)
+        else:
+            self.settings.erase(dest)
 
     def restore(self, t):
-        """
-        Restore the view's caret settings.
-        """
+        """Restore the view's caret settings."""
 
         if self.settings.get("caret_last_change", "") == t:
             defaults = self.settings.get("caret_defaults", None)
@@ -102,9 +104,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
                 self.settings.erase("caret_last_index")
 
     def high_visibility(self):
-        """
-        Make the caret highly visible
-        """
+        """Make the caret highly visible."""
 
         self.time = time.time()
         self.settings.set("caret_extra_width", 10)
@@ -116,7 +116,8 @@ class FindCursorCommand(sublime_plugin.TextCommand):
 
     def focus_cursor(self, cursor, index, pan):
         """
-        Focus the given cursor if applicable.
+        Set focus on the given cursor if applicable.
+
         Set the last cursor index in the view settings.
         """
 
@@ -128,9 +129,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
         self.settings.set("caret_last_index", index)
 
     def find_cursor(self, direction, pan):
-        """
-        Find cursor and adjust view if not the first time.
-        """
+        """Find cursor and adjust view if not the first time."""
 
         if direction not in [FORWARD, BACKWARD]:
             return
@@ -141,18 +140,19 @@ class FindCursorCommand(sublime_plugin.TextCommand):
             self.focus_cursor(cursor, index, pan)
 
     def get_cursor(self, direction, pan):
-        """
-        Get the cursor.
-        """
+        """Get the cursor."""
 
         return self.get_pan_cursor(direction) if pan else self.get_iter_cursor(direction)
 
     def get_pan_cursor(self, direction):
         """
+        Get cursor in pan mode.
+
         On first call, get first cursor in viewable region.
         If no cursor in viewable region or on additional calls,
         grab first cursor outside of viewable region in the desired direction.
         """
+
         self.skip_focus = int(self.settings.get("caret_last_index", NULL_INDEX)) == NULL_INDEX
         cursor = None
         index = int(self.settings.get("caret_last_index", NULL_INDEX))
@@ -190,6 +190,8 @@ class FindCursorCommand(sublime_plugin.TextCommand):
 
     def get_iter_cursor(self, direction):
         """
+        Iterate through cursors.
+
         On first call get first cursor in viewable region opposite to the desired direction.
         If no cursors is in viewable region or on additional calls,
         iterate to the next cursor in the desired direction.
@@ -238,9 +240,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
         return cursor, index
 
     def run(self, edit, reverse=False, pan=False):
-        """
-        Show the cursor and the carets in a highly visible way, then revert them back to normal.
-        """
+        """Show the cursor and the carets in a highly visible way, then revert them back to normal."""
 
         self.settings = sublime.load_settings("find_cursor.sublime-settings")
         timeout = self.settings.get("find_mode_timeout", 3000)
@@ -251,8 +251,13 @@ class FindCursorCommand(sublime_plugin.TextCommand):
 
 
 class FindCursorListener(sublime_plugin.EventListener):
+
+    """FindCursor listener."""
+
     def on_selection_modified_async(self, view):
         """
+        Handle on selection modified event.
+
         If selection was modified, erase the tracked last index.
         """
 

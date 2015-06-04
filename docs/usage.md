@@ -1,10 +1,9 @@
 # User Guide {: .doctitle}
 Configuration and usage of SubNotify.
-{: .doctitle-info}
 
 ---
 
-# Getting Started
+## Getting Started
 Create a command and define its search direction and whether you will use the pan feature or the default cursor iteration feature.
 
 Example Keymap:
