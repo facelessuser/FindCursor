@@ -1,12 +1,12 @@
 [![Unix Build Status][travis-image]][travis-link]
 ![License][license-image]
 # FindCursor
-Sublime plugin to make finding and the cursor(s) quick and easy.
+Sublime plugin to make finding and viewing the cursor(s) quick and easy.
 
 # Features
 
-- Quickly find your cursor(s) by making them highly visible
-- On additional calls, either pan through cursors or iterate through cursors
+- Quickly find your cursor(s) by making them highly visible.
+- On additional calls, either pan through cursors or iterate through cursors.
 
 # Documentation
 http://facelessuser.github.io/FindCursor/
