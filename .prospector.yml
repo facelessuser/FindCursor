@@ -5,8 +5,6 @@ max-line-length: 120
 ignore-patterns:
   - docs
   - docs_theme
-  - tiger.py
-  - whirlpool.py
 dodgy:
   run: false
 pep257:
