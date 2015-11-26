@@ -49,14 +49,12 @@ BACKWARD = -1
 
 
 class PanCursor(namedtuple('PanCursor', ['cursor', 'distance', 'index'], verbose=False)):
-
     """Pan cursor object."""
 
     pass
 
 
 class FindCursorCommand(sublime_plugin.TextCommand):
-
     """Find cursor command."""
 
     def save_item(self, defaults, src, dest):
@@ -251,7 +249,6 @@ class FindCursorCommand(sublime_plugin.TextCommand):
 
 
 class FindCursorListener(sublime_plugin.EventListener):
-
     """FindCursor listener."""
 
     def on_selection_modified_async(self, view):
