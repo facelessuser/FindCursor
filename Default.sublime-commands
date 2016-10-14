@@ -1,22 +1,22 @@
 [
 			{
-				"caption": "Find Cursor: Reverse False, Pan False",
+				"caption": "Find Cursor",
 				"command": "find_cursor",
 				"args": {"reverse": false, "pan": false}
 			},
 			{
-				"caption": "Find Cursor: Reverse True, Pan False",
+				"caption": "Find Cursor Reverse",
 				"command": "find_cursor",
 				"args": {"reverse": true, "pan": false}
 			},
 			{
-				"caption": "Find Cursor: Reverse False, Pan True",
+				"caption": "Find Cursor Iterative",
 				"command": "find_cursor",
 				"args": {"reverse": false, "pan": true}
 			},
 			{
-				"caption": "Find Cursor: Reverse True, Pan True",
+				"caption": "Find Cursor Iterative Reverse",
 				"command": "find_cursor",
 				"args": {"reverse": true, "pan": true}
-			},
+			}
 ]
