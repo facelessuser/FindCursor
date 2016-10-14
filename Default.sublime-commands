@@ -1,0 +1,22 @@
+[
+			{
+	            "caption": "Find Cursor: Reverse False, Pan False",
+	            "command": "find_cursor",
+	            "args": {"reverse": false, "pan": false}
+	        },
+			{
+	            "caption": "Find Cursor: Reverse True, Pan False",
+	            "command": "find_cursor",
+	            "args": {"reverse": true, "pan": false}
+	        },
+	    		{
+	            "caption": "Find Cursor: Reverse False, Pan True",
+	            "command": "find_cursor",
+	            "args": {"reverse": false, "pan": true}
+	        },
+			{
+	            "caption": "Find Cursor: Reverse True, Pan True",
+	            "command": "find_cursor",
+	            "args": {"reverse": true, "pan": true}
+	        },
+]
