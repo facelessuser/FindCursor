@@ -1,0 +1,15 @@
+[
+    //////////////////////////////////
+    // Find Cursor: Panning Find
+    //////////////////////////////////
+    {
+        "caption": "Find Cursor",
+        "command": "find_cursor",
+        "args": {"reverse": false, "pan": true}
+    },
+    {
+        "caption": "Find Cursor (Reverse)",
+        "command": "find_cursor",
+        "args": {"reverse": true, "pan": true}
+    }
+]

@@ -2,7 +2,7 @@
 Find Cursor.
 
 Licensed under MIT
-Copyright (c) 2014 - 2015 Isaac Muse <isaacmuse@gmail.com>
+Copyright (c) 2014 - 2016 Isaac Muse <isaacmuse@gmail.com>
 
 Makes Sublime cursors highly visible for a short duration.
 
