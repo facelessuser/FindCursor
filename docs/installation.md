@@ -32,4 +32,4 @@ The recommended way to install FindCursor is via [Package Control](https://packa
     git clone https://github.com/facelessuser/FindCursor.git FindCursor
     ```
 
-3 Restart Sublime Text.
+3. Restart Sublime Text.
