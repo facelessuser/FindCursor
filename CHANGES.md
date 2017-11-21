@@ -1,3 +1,9 @@
+# FindCursor 1.3.1
+
+> Released Nov 20, 2017
+
+- **FIX**: Update dependencies.
+
 # FindCursor 1.3.0
 
 > Released May 27, 2017
