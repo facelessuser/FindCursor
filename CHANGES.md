@@ -2,7 +2,7 @@
 
 ## 1.3.2
 
-- **FIX**: Update dependencies.
+- **FIX**: Fix support commands.
 
 ## 1.3.0
 
