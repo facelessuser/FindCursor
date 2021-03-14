@@ -14,7 +14,7 @@ Sublime plugin to make finding and viewing the cursor(s) quick and easy.
 
 # Documentation
 
-http://facelessuser.github.io/FindCursor/
+https://facelessuser.github.io/FindCursor/
 
 # License
 
