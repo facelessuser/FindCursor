@@ -1,26 +1,20 @@
-# FindCursor 1.3.1
+# FindCursor
 
-> Released Nov 20, 2017
+## 1.3.2
 
 - **FIX**: Update dependencies.
 
-# FindCursor 1.3.0
-
-> Released May 27, 2017
+## 1.3.0
 
 - **NEW**: New support commands.
 - **NEW**: Phantoms only on 3124+.
 - **NEW**: Use new settings API.
 
-# FindCursor 1.2.1
-
-> Released Nov 5, 2016
+## 1.2.1
 
 - **FIX**: Fix changelog links
 
-# FindCursor 1.2.0
-
-> Released Nov 5, 2016
+## 1.2.0
 
 - **NEW**: Add some commands for use out of the box.
 - **NEW**: Add `Support Info` and `Changelog` commands.

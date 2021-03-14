@@ -9,6 +9,7 @@ MkDocs
 NONINFRINGEMENT
 PyMdown
 Screencast
+Twemoji
 boolean
 builtins
 dev
