@@ -1,0 +1,9 @@
+.gitattributes export-ignore
+.github/ export-ignore
+.gitignore export-ignore
+.pyspelling.yml export-ignore
+.travis.yml export-ignore
+docs/ export-ignore
+mkdocs.yml export-ignore
+tests/ export-ignore
+tox.ini export-ignore
