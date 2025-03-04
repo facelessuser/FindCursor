@@ -13,23 +13,25 @@ suited for keymaps (the recommended way to use FindCursor).
 
 ## Command
 
-`find_cursor`
-: 
+/// define
 
-    When the command is first invoked, all cursors will turn to block cursors and blink making them highly visible.
+`find_cursor`
+
+
+-   When the command is first invoked, all cursors will turn to block cursors and blink making them highly visible.
     Subsequent invocations (if performed before timeout -- i.e. while the cursors are still highlighted) will cycle
     through the cursors in the view.  The focus modes are **iterative mode** (the default) and **pan mode**.
 
-    - **Iterative Mode**: Iterative mode is the default.  This will cycle through each cursor centering it in the view.
-    Iteration only occurs when the command is ran an additional time while the cursors are still in their highlighted
-    state.  If run after they have reverted to their original state, FindCursor will just show the next off screen
-    cursor.  For this reason, iterative mode doesn't work too well from the command palette as the command is slow to
-    activate from the command line; iterative mode is **not** provided by default in the command palette for the these
-    reasons.
+    -   **Iterative Mode**: Iterative mode is the default. This will cycle through each cursor centering it in the view.
+        Iteration only occurs when the command is ran an additional time while the cursors are still in their
+        highlighted state. If run after they have reverted to their original state, FindCursor will just show the next
+        off screen cursor. For this reason, iterative mode doesn't work too well from the command palette as the command
+        is slow to activate from the command line; iterative mode is **not** provided by default in the command palette
+        for the these reasons.
 
-    - **Pan Mode**: Pan mode, or panning mode, will pan through the cursors in your view.  While iterative mode will
-      focus each cursor individually while the in the high visibility state, pan mode will just jump to the next group
-      of offscreen cursors.
+    -   **Pan Mode**: Pan mode, or panning mode, will pan through the cursors in your view.  While iterative mode will
+        focus each cursor individually while the in the high visibility state, pan mode will just jump to the next group
+        of offscreen cursors.
 
     Parameters | Type    | Description
     ---------- | ------- | -----------
@@ -39,6 +41,7 @@ suited for keymaps (the recommended way to use FindCursor).
     Screencast demonstrating the differences of pan vs iterative:
 
     ![screencast](images/screencast.gif)
+///
 
 
 ## Defining Keymaps
