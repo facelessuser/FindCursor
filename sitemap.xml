@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>https://facelessuser.github.io/FindCursor/</loc>
-     <lastmod>2021-03-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://facelessuser.github.io/FindCursor/installation/</loc>
-     <lastmod>2021-03-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://facelessuser.github.io/FindCursor/about/contributing/</loc>
-     <lastmod>2021-03-14</lastmod>
-     <changefreq>daily</changefreq>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://facelessuser.github.io/FindCursor/</loc>
+         <lastmod>2025-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://facelessuser.github.io/FindCursor/installation/</loc>
+         <lastmod>2025-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://facelessuser.github.io/FindCursor/_snippets/abbr/</loc>
+         <lastmod>2025-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://facelessuser.github.io/FindCursor/_snippets/links/</loc>
+         <lastmod>2025-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://facelessuser.github.io/FindCursor/_snippets/refs/</loc>
+         <lastmod>2025-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://facelessuser.github.io/FindCursor/about/contributing/</loc>
+         <lastmod>2025-03-04</lastmod>
     </url>
 </urlset>
