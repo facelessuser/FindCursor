@@ -1,4 +1,3 @@
-[![Unix Build Status][travis-image]][travis-link]
 [![Package Control Downloads][pc-image]][pc-link]
 ![License][license-image]
 # FindCursor
@@ -20,8 +19,6 @@ https://facelessuser.github.io/FindCursor/
 
 MIT
 
-[travis-image]: https://img.shields.io/travis/facelessuser/FindCursor/master.svg
-[travis-link]: https://travis-ci.org/facelessuser/FindCursor
 [pc-image]: https://img.shields.io/packagecontrol/dt/FindCursor.svg
 [pc-link]: https://packagecontrol.io/packages/FindCursor
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
