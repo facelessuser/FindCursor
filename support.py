@@ -92,24 +92,6 @@ class FindCursorSupportInfoCommand(sublime_plugin.ApplicationCommand):
         except Exception:
             info["mdpopups_version"] = 'Version could not be acquired!'
 
-        try:
-            import markdown
-            info["markdown_version"] = format_version(markdown, 'version')
-        except Exception:
-            info["markdown_version"] = 'Version could not be acquired!'
-
-        try:
-            import jinja2
-            info["jinja_version"] = format_version(jinja2, '__version__')
-        except Exception:
-            info["jinja_version"] = 'Version could not be acquired!'
-
-        try:
-            import pygments
-            info["pygments_version"] = format_version(pygments, '__version__')
-        except Exception:
-            info["pygments_version"] = 'Version could not be acquired!'
-
         msg = textwrap.dedent(
             """\
             - ST ver.: %(version)s
