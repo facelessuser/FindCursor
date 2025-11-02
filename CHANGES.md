@@ -1,5 +1,9 @@
 # FindCursor
 
+## 1.3.4
+
+-   **FIX**: Ensure Python 3.3 host uses `typing` dependency.
+
 ## 1.3.3
 
 -   **FIX**: Python 3.8 fixes.
