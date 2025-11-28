@@ -1,5 +1,9 @@
 # FindCursor
 
+## 1.4.0
+
+-   **NEW**: Changes for Python 3.13 in ST 4201+.
+
 ## 1.3.4
 
 -   **FIX**: Ensure Python 3.3 host uses `typing` dependency.
